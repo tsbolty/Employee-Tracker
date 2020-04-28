@@ -1,6 +1,5 @@
 const mysql = require("mysql")
-const inquirer = require("inquirer")
-const questions = require("./questions.js")
+require("../questions.js")
 
 
 const connection = mysql.createConnection({
@@ -13,7 +12,8 @@ const connection = mysql.createConnection({
 
 connection.connect(function(err) {
   if (err) throw err;
-  console.log("connected as id " + connection.threadId + "\n");
+  // console.log("connected as id " + connection.threadId + "\n");
 });
 
 
+module.exports= connection
